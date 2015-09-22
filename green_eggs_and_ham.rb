@@ -36,7 +36,7 @@ class GreenEggsAndHam
   end
 
   def lines
-    lines = @text.gsub(/\n\n/,"\n").split("\n")
+    @text.gsub(/\n\n/,"\n").split("\n")
   end
 
   def punctuation_count
@@ -44,7 +44,6 @@ class GreenEggsAndHam
   end
 
   def most_common_line
-    lines = @text.gsub(/\n\n/,"\n").split("\n")
     lines.max_by { |line| lines.count(line) }
   end
 end
